@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#784cfb">
+    <meta name="description" content="A step-by-step tutorial with snippets on how to create a simple star rating review feature using JavaScript for Beginners.">
+    <meta name="keywords" content="Star Rating, Star rating in javascript, feedback star rating form">
+    <meta name="author" content="Rajamanickam">
+    <link rel="icon" href="https://rajamanickam.vercel.app/favicon-rajamanickam.png">
+    <title>Simple Star Rating using javascript | Rajamanickam</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+</head>
+<body>
+    <section class="section">
+        <div class="star-rating-bx">
+            <h2 class="text-center">Feedback</h2>
+            <div class="star-widget">
+                <form method="GET" name="feedback" action="#" onsubmit="feedBack(); return false">
+                <input type="radio" name="star" id="rate-5" value="5">
+                <label for="rate-5" class="fa-solid fa-star"></label>
+                <input type="radio" name="star" id="rate-4" value="4">
+                <label for="rate-4" class="fa-solid fa-star"></label>
+                <input type="radio" name="star" id="rate-3" value="3">
+                <label for="rate-3" class="fa-solid fa-star"></label>
+                <input type="radio" name="star" id="rate-2" value="2">
+                <label for="rate-2" class="fa-solid fa-star"></label>
+                <input type="radio" name="star" id="rate-1" value="1">
+                <label for="rate-1" class="fa-solid fa-star"></label>
+                <p id="error-rating"></p>
+                <p class="rating-desc"></p>
+                <div class="textarea">
+                    <textarea cols="30" id="comment" placeholder="Describe your comment"></textarea>
+                    <p id="error-comment"></p>
+                </div>
+                <div class="btn">
+                    <button type="submit">Submit</button>
+                </div>
+                    <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Thank you</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick="reload"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>We appreciate you sending us your feedback.</p>
+                                <p><strong>You're select </strong>⭐ <span id="star_count"></span></p>
+                                <p><strong>Your comment </strong><span id="comment_text"></span></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+</body>
+</html>
